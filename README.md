@@ -97,7 +97,8 @@ This will load the Iris dataset, train a classifier using mini-batch gradient de
 
 ```bash
 python examples/solve_iris.py
-
+```
+```bash
 You will see an output like this:
 Training MiniTorch model on Iris dataset...
 Epoch 20/200, Loss: 1.054321
@@ -117,7 +118,9 @@ Loading model for testing...
 Model weights loaded successfully from iris_model.npz.
 
 Test Accuracy (from loaded model): 96.67%
+```
 
+```bash
 🛠️ Project Structure
 minitorch_project/
 ├── minitorch/
