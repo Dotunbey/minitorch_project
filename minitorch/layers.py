@@ -35,11 +35,11 @@ class Linear(Module):
         """
         # Gradient for W: (dLoss / dW) = (dLoss / dOutput) * (dOutput / dW)
         # dOutput / dW = x
-        self.grad_W = np.dot(self.x.T, grad)
+        self.grad_W[:] = np.dot(self.x.T, grad)
         
         # Gradient for b: (dLoss / db) = (dLoss / dOutput) * (dOutput / db)
         # dOutput / db = 1
-        self.grad_b = np.sum(grad, axis=0, keepdims=True)
+        self.grad_b[:] = np.sum(grad, axis=0, keepdims=True)
         
         # Gradient to pass to the *previous* layer: (dLoss / dx)
         # (dLoss / dx) = (dLoss / dOutput) * (dOutput / dx)

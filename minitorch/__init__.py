@@ -1,4 +1,3 @@
-
 from .module import Module, Sequential
 from .layers import Linear, Sigmoid, ReLU
 from .losses import MSELoss, CrossEntropyLoss

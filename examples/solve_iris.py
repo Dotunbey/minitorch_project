@@ -1,5 +1,5 @@
 import numpy as np
-from minitorch import Sequential, Linear, ReLU, CrossEntropyLoss, SGD
+from minitorch import Sequential, Sigmoid, Linear, ReLU, CrossEntropyLoss, SGD
 from minitorch import save_model, load_model
 from sklearn.datasets import load_iris
 from sklearn.preprocessing import StandardScaler
@@ -39,10 +39,10 @@ def main():
 
     # 3. Define Loss and Optimizer
     loss_fn = CrossEntropyLoss()
-    optimizer = SGD(model.parameters(), lr=0.01)
+    optimizer = SGD(model.parameters(), lr=0.5)
 
     # 4. The Training Loop (with mini-batching)
-    epochs = 200
+    epochs = 5000
     batch_size = 16
     
     print("Training MiniTorch model on Iris dataset...")
